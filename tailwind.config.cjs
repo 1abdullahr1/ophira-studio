@@ -8,22 +8,23 @@ module.exports = {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffffff',
+      text: '#050315',
+      background: '#fbfbfe',
+      secondary: '#dedcff',
+      accent: '#433bff',
       primary: {
-        50: '#f5f7fa',   // Platinum (light mode background)
-        100: '#e5eef9',
-        200: '#cfe0f7',
-        300: '#9bc2ff',
-        400: '#4ea5ff',  // Cool Horizon (dark mode accent)
-        500: '#288eff',
-        600: '#207bff',  // Azure Blue (primary brand CTA / accent)
-        700: '#1162db',
-        800: '#0f4eb3',
-        900: '#124388',
-        950: '#091629',  // Deep dark mode navy canvas / dark text
+        50: '#fbfbfe',   // --background (#fbfbfe)
+        100: '#dedcff',  // --secondary (#dedcff)
+        200: '#c5c2ff',  // dark-mode readable text
+        300: '#9b94ff',
+        400: '#433bff',  // --accent (#433bff)
+        500: '#3830eb',
+        600: '#2f27ce',  // --primary (#2f27ce)
+        700: '#241da8',  // hover CTA
+        800: '#1b1682',
+        900: '#130f5c',
+        950: '#050315',  // --text (#050315)
       },
-      'azure-blue': '#207bff',
-      'cool-horizon': '#4ea5ff',
-      'platinum': '#f5f7fa',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],

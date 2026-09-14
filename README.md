@@ -3,9 +3,11 @@
 A modern, responsive Astro website built with Tailwind CSS and Alpine.js.
 
 ## Brand Color Palette
-- **Azure Blue**: `#207bff` (Primary brand accent, light-mode buttons & active highlights)
-- **Cool Horizon**: `#4ea5ff` (Secondary accent, dark-mode highlights & badges)
-- **Platinum**: `#f5f7fa` (Light-mode page background and soft card fills)
+- `--text`: `#050315` (Light-mode body text & dark-mode deep canvas)
+- `--background`: `#fbfbfe` (Light-mode page background)
+- `--primary`: `#2f27ce` (Primary brand accent, main CTA buttons & highlights)
+- `--secondary`: `#dedcff` (Secondary accent, soft borders & badges)
+- `--accent`: `#433bff` (Accent, dark-mode buttons & interactive highlights)
 
 ## Tech Stack
 - [Astro](https://astro.build/)
