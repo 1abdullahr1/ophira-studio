@@ -26,6 +26,20 @@ const { description, title } = Astro.props;
     <meta name="description" content={description} />
     <title>{title}</title>
     <ViewTransitions />
+    <script is:inline>
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      document.addEventListener('astro:after-swap', () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme') === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      });
+    </script>
   </head>
   <body
     class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
@@ -55,15 +69,7 @@ const { description, title } = Astro.props;
 
       Alpine.store('theme', {
         init() {
-          this.isDark = (() => {
-            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-              return localStorage.getItem('theme') === 'dark';
-            }
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              return true;
-            }
-            return false;
-          })();
+          this.isDark = typeof localStorage !== 'undefined' && localStorage.getItem('theme') === 'dark';
         },
 
         isDark: false,
